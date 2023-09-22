@@ -1,0 +1,27 @@
+{
+  "name": "mi-proyecto",
+  "version": "1.0.0",
+  "description": "Una aplicación web que permite a los usuarios gestionar el préstamo de libros en la Biblioteca Unicosta, almacenando la información de los préstamos en archivos de texto en un servidor web y facilitando la descarga de estos archivos",
+  "main": "index.js",
+  "scripts": {
+    "test": "Jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALFONSOVM13/Actividad1-Corte2.git"
+  },
+  "author": "AlfonsoVM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ALFONSOVM13/Actividad1-Corte2/issues"
+  },
+  "homepage": "https://github.com/ALFONSOVM13/Actividad1-Corte2#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-validator": "^7.0.1",
+    "fs": "^0.0.1-security",
+    "sweetalert2": "^11.7.28"
+  }
+}
