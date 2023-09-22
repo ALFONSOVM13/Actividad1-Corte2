@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Préstamo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+  
+    <div id="form-container">
+      <form action="/prestamo" method="POST">
+        <h1>Formulario de Préstamo</h1>
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required>
+
+        <script>
+          // Obtén una referencia al campo de entrada del ID
+          const inputId = document.getElementById('id');
+        
+          // Agrega un manejador de eventos para el evento "input"
+          inputId.addEventListener('input', function () {
+            // Obtén el valor actual del campo de entrada
+            let valor = inputId.value;
+        
+            // Reemplaza cualquier caracter no numérico con una cadena vacía
+            valor = valor.replace(/[^0-9]/g, '');
+        
+            // Limita la longitud a un máximo de 10 caracteres
+            if (valor.length > 10) {
+              valor = valor.slice(0, 10);
+            }
+        
+            // Asigna el valor filtrado y limitado de vuelta al campo de entrada
+            inputId.value = valor;
+          });
+        </script>
+        
+      
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]{2,}" title="Ingresa un nombre válido" required oninput="setCustomValidity('')"><br>
+      
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]{2,}" title="Ingresa un apellido válido" required oninput="setCustomValidity('')"><br>
+      
+        <label for="titulo">Título del libro:</label>
+        <input type="text" id="titulo" name="titulo"><br>
+      
+        <label for="autor">Autor del libro:</label>
+        <input type="text" id="autor" name="autor"><br>
+      
+        <label for="editorial">Editorial:</label>
+        <input type="text" id="editorial" name="editorial"><br>
+      
+        <label for="año">Año:</label>
+        <input type="text" id="año" name="año" required>
+        
+        
+        
+      
+        <button type="submit">Enviar</button>
+      </form>
+      
+      </div>
+      
+</body>
+<script>
+  // Obtén una referencia al campo de entrada del año
+  const inputAño = document.getElementById('año');
+
+  // Agrega un manejador de eventos para el evento "input"
+  inputAño.addEventListener('input', function () {
+    // Obtén el valor actual del campo de entrada
+    const valor = inputAño.value;
+
+    // Reemplaza cualquier caracter no numérico con una cadena vacía
+    const valorNumerico = valor.replace(/[^0-9]/g, '');
+
+    // Limita la longitud a exactamente 4 dígitos
+    const valorLimitado = valorNumerico.slice(0, 4);
+
+    // Asigna el valor filtrado y limitado de vuelta al campo de entrada
+    inputAño.value = valorLimitado;
+  });
+</script>
+</html>
