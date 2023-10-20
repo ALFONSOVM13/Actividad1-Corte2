@@ -4,6 +4,7 @@
   "description": "Una aplicación web que permite a los usuarios gestionar el préstamo de libros en la Biblioteca Unicosta, almacenando la información de los préstamos en archivos de texto en un servidor web y facilitando la descarga de estos archivos",
   "main": "index.js",
   "scripts": {
+    "start": "app.js",
     "test": "Jest"
   },
   "repository": {
